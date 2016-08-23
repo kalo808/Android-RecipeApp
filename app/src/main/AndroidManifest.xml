@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.adotdamo.android.recipeapp"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.adotdamo.android.recipeapp.RecipeActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.adotdamo.android.recipeapp.IngredientPagerActivity"
+                  android:theme="@style/AppTheme"
+                  android:parentActivityName=".RecipeActivity">
+
+        </activity>
+        <activity android:name=".RecipePageActivity"
+            android:theme="@style/AppTheme"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+    </application>
+
+</manifest>
